@@ -1,0 +1,7 @@
+{
+    "host": "MYSQL_SERVER_IP",
+    "user": "USERNAME",
+    "password": "PASSWORD",
+    "database": "DATABASE_NAME",
+    "port": PORT
+}
