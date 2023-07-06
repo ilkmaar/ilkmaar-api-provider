@@ -16,7 +16,7 @@ const interactionsQuery = `
     JOIN
         location_groups on locations.location_group_id = location_groups.location_group_id
     WHERE
-        creature_name like ?`;
+        creature_name like :creatureName`;
 const giftsQuery = `
     SELECT gifting_events.gifting_event_time, players.player_name, recipes.recipe_category
     FROM
@@ -34,7 +34,7 @@ const giftsQuery = `
     JOIN
         recipes on items.recipe_id = recipes.recipe_id
     WHERE
-        creature_name like ?`;
+        creature_name like :creatureName`;
 
 const allQueries = {
   '/list': 'SELECT * FROM creatures',
@@ -43,8 +43,8 @@ const allQueries = {
   '/creatureMood': creatureMoodQuery,
   '/happiestCreatures': happiestCreaturesQuery,
   '/triageList': triageListQuery,
-  '/interactions': interactionsQuery,
-  '/gifts': giftsQuery
+  '/interactions': interactionsQuery, // params: creatureName
+  '/gifts': giftsQuery // params: creatureName
 };
 
 module.exports = allQueries;

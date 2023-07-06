@@ -17,5 +17,5 @@ const visitorLogQuery = `
 
 module.exports = {
     'mapAreasQuery': mapAreasQuery,
-    'visitorLogQuery': visitorLogQuery
+    'visitorLogQuery': visitorLogQuery // params: locationGroup
 };

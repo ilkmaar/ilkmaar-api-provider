@@ -1,4 +1,5 @@
 const playersMetadata = {
+    params: {},
     columns: [
         { name: "player_id", displayName: "Player ID", type: "integer", scale: "ordinal" },
         { name: "player_name", displayName: "Player Name", type: "name", scale: "categorical" },
@@ -10,6 +11,9 @@ const playersMetadata = {
 };
 
 const foragingMetadata = {
+    params: {
+        "playerName" : {"required": true}
+    },
     columns: [
         { name: "resource_transfer_time", displayName: "Transfer Time", type: "time", scale: "ordinal" },
         { name: "resource_id", displayName: "Resource ID", type: "integer", scale: "ordinal" },
@@ -22,6 +26,9 @@ const foragingMetadata = {
 };
 
 const giftingMetadata = {
+    params: {
+        "playerName" : {"required": true}
+    },
     columns: [
         { name: "gifting_event_time", displayName: "Event Time", type: "time", scale: "ordinal" },
         { name: "creature_name", displayName: "Creature Name", type: "name", scale: "categorical" },
@@ -33,6 +40,9 @@ const giftingMetadata = {
 };
 
 const craftingMetadata = {
+    params: {
+        "playerName" : {"required": true}
+    },
     columns: [
         { name: "crafting_event_time", displayName: "Crafting Time", type: "time", scale: "ordinal" },
         { name: "recipe_name", displayName: "Recipe Name", type: "name", scale: "categorical" }
@@ -43,6 +53,9 @@ const craftingMetadata = {
 };
 
 const trashMetadata = {
+    params: {
+        "playerName" : {"required": true}
+    },
     columns: [
         { name: "resource_transfer_time", displayName: "Transfer Time", type: "time", scale: "ordinal" },
         { name: "resource_type", displayName: "Resource Type", type: "name", scale: "categorical" },
@@ -54,6 +67,7 @@ const trashMetadata = {
 };
 
 const allPlayerGiftingLogMetadata = {
+    params: {},
     columns: [
         { name: "gifting_event_time", displayName: "Gifting Time", type: "time", scale: "ordinal" },
         { name: "recipe_name", displayName: "Recipe Name", type: "name", scale: "categorical" },

@@ -20,10 +20,10 @@ const resourceFinderQuery = `
     WHERE
         destination_collections.collection_type = 'inventory'
     AND
-        resource_types.resource_type = ?
+        resource_types.resource_type = :resourceType
     GROUP BY resource_types.resource_type, source_collections.collection_name
     ORDER BY count DESC`;
 
 module.exports = {
-    '/resourceFinder' : resourceFinderQuery
+    '/resourceFinder' : resourceFinderQuery  // params: resourceType
 };

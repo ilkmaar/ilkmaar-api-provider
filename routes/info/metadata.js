@@ -1,4 +1,5 @@
 const mapAreasMetadata = {
+    params: {},
     columns: [
         { name: "location_group_id", displayName: "Location Group ID", type: "integer", scale: "ordinal" },
         { name: "location_group_name", displayName: "Location Group Name", type: "name", scale: "categorical" },
@@ -10,6 +11,7 @@ const mapAreasMetadata = {
 };
 
 const visitorLogMetadata = {
+    params: {},
     columns: [
         { name: "creature_sighting_time", displayName: "Sighting Time", type: "time", scale: "ordinal" },
         { name: "creature_name", displayName: "Creature Name", type: "name", scale: "categorical" }

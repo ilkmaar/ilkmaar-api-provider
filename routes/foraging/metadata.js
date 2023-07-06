@@ -1,4 +1,7 @@
 const resourceFinderMetadata = {
+    params: {
+        "resourceType" : {"required": true}
+    },
     columns: [
         { name: "resource", displayName: "Resource", type: "name", scale: "categorical" },
         { name: "source", displayName: "Source", type: "name", scale: "categorical" },

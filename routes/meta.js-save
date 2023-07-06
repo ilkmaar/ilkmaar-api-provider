@@ -3,76 +3,232 @@ const router = express.Router();
 
 areas = [
     {
-    "area": "Creatures",
-    "dataSources": [ // creatureLookup, creatureHealth, creatureMood, happiestCreatures, triageList
+    "area": "Waiting Room",
+    "dataSources": [
         {
-            "source": "Creature Factions Lookup Book",
-            "endpoint": "/creatures/creatureLookup"
+        "source": "Visitor Log"
         },
         {
-            "source": "Health Oracle",
-            "endpoint": "/creatures/creatureHealth"
+        "source": "Waiting Room Magazine: Top 10 Foods for Creature Mood"
         },
         {
-            "source": "Mood Oracle",
-            "endpoint": "/creatures/creatureMood"
+        "source": "Creature Comfort Catalog"
         },
         {
-            "source": "Top 10 Happiest Creatures",
-            "endpoint": "/creatures/happiestCreatures"
-        },
-        {
-            "source": "Triage List",
-            "endpoint": "/creatures/triageList"
+        "source": "Creature Needs and Preferences Manual"
         }
-      ]
+    ]
     },
     {
-    "area": "Resources & Crafting",
-    "dataSources": [ // cookBook, goodCookBook, cauldronManual, resourceFinder
+    "area": "Treatment Rooms",
+    "dataSources": [
         {
-            "source": "Cook Book",
-            "endpoint": "/crafting/cookBook"
+        "source": "Lab Slips"
         },
         {
-            "source": "Extremely Useful Cook Book",
-            "endpoint": "/crafting/goodCookBook"
+        "source": "Transfer Records"
         },
         {
-            "source": "Cauldron",
-            "endpoint": "/crafting/cauldronManual"
+        "source": "Medical Records"
         },
         {
-          "source": "Resource Finder",
-          "endpoint": "/foraging/resourceFinder"
+        "source": "Creature Health Textbook"
+        },
+        {
+        "source": "Anomalies Bulletin Board"
         }
-      ]
+    ]
     },
     {
-    "area": "Players",
-    "dataSources": [ // foraging, gifting, crafting, trash, allPlayerGiftingLog
+    "area": "Potions Lab",
+    "dataSources": [
         {
-            "source": "Foraging Log",
-            "endpoint": "/players/foraging"
+        "source": "Potions Cook Book"
         },
         {
-            "source": "Gifting Log",
-            "endpoint": "/players/gifting"
+        "source": "Potion Maker's Diary"
         },
         {
-            "source": "Crafting Log",
-            "endpoint": "/players/crafting"
+        "source": "Research Data"
         },
         {
-            "source": "Trash",
-            "endpoint": "/players/trash"
+        "source": "Potioncrafting Data"
         },
         {
-            "source": "All-Player Shared Gifting Log",
-            "endpoint": "/players/allPlayerGiftingLog"
+        "source": "Inventory Efficiency Review"
         }
-      ]
-    }
+    ]
+    },
+    {
+    "area": "Potions Office",
+    "dataSources": [
+        {
+        "source": "Top 10 Healthiest Creatures Poster"
+        },
+        {
+        "source": "Hall of Healing Heroes"
+        },
+        {
+        "source": "Potions Hospital Annual Report"
+        }
+    ]
+    },
+    {
+        "area": "Crafting Workshop",
+        "dataSources": [
+          {
+            "source": "Crafting Manual"
+          },
+          {
+            "source": "Recipe Book"
+          },
+          {
+            "source": "Gift Success Rate Records"
+          },
+          {
+            "source": "Material Compatibility Chart"
+          },
+          {
+            "source": "Quality Inspection Reports"
+          }
+        ]
+    },
+    {
+        "area": "Trade Post",
+        "dataSources": [
+          {
+            "source": "Trade Records"
+          },
+          {
+            "source": "Creature Order Requests"
+          },
+          {
+            "source": "Customer Satisfaction Surveys"
+          },
+          {
+            "source": "Popular Items List"
+          },
+          {
+            "source": "Inventory Management System"
+          }
+        ]
+      },
+      {
+        "area": "Community Meeting Place",
+        "dataSources": [
+          {
+            "source": "Creature Social Network Diagram"
+          },
+          {
+            "source": "Creature Habit Calendar"
+          },
+          {
+            "source": "Community Engagement Report"
+          },
+          {
+            "source": "Creatures' Gift Preferences Directory"
+          }
+        ]
+      },
+      {
+        "area": "Island Newspaper",
+        "dataSources": [
+          {
+            "source": "Creature Mood Barometer"
+          },
+          {
+            "source": "Faction Relations Update"
+          },
+          {
+            "source": "Island Infrastructure Report"
+          },
+          {
+            "source": "Biome Health Index"
+          },
+          {
+            "source": "Foraging Activity Log"
+          },
+          {
+            "source": "Daily Weather Forecast"
+          },
+          {
+            "source": "Island Event Calendar"
+          },
+          {
+            "source": "Featured Creature Interview"
+          },
+          {
+            "source": "Success Stories"
+          },
+          {
+            "source": "Advice Column for Crafters"
+          },
+          {
+            "source": "Trade Post Market Trends"
+          }
+        ]
+      },
+      {
+        "area": "Misc",
+        "dataSources": [ // creatureLookup, creatureHealth, creatureMood, happiestCreatures, triageList
+            {
+                "source": "Creature Factions Lookup Book",
+                "endpoint": "/creatures/creatureLookup"
+            },
+            {
+                "source": "Health Oracle",
+                "endpoint": "/creatures/creatureHealth"
+            },
+            {
+                "source": "Mood Oracle",
+                "endpoint": "/creatures/creatureMood"
+            },
+            {
+                "source": "Top 10 Happiest Creatures",
+                "endpoint": "/creatures/happiestCreatures"
+            },
+            {
+                "source": "Triage List",
+                "endpoint": "/creatures/triageList"
+            },
+            {
+                "source": "Cook Book",
+                "endpoint": "/crafting/cookBook"
+            },
+            {
+                "source": "Extremely Useful Cook Book",
+                "endpoint": "/crafting/goodCookBook"
+            },
+            {
+                "source": "Cauldron",
+                "endpoint": "/crafting/cauldronManual"
+            },
+            {
+                "source": "Foraging Log",
+                "endpoint": "/players/foraging"
+            },
+            {
+                "source": "Gifting Log",
+                "endpoint": "/players/gifting"
+            },
+            {
+                "source": "Crafting Log",
+                "endpoint": "/players/crafting"
+            },
+            {
+                "source": "Trash",
+                "endpoint": "/players/trash"
+            },
+            {
+                "source": "All-Player Shared Gifting Log",
+                "endpoint": "/players/allPlayerGiftingLog"
+            },
+            {
+                "source": "Resource Finder",
+                "endpoint": "/foraging/resourceFinder"
+            }
+          ]
+        }
 ]
 
 // /info 
@@ -89,6 +245,7 @@ areas = [
 
 // /foraging
 //-- resourceFinder
+
 
 tables = {
   "collections": {
@@ -1703,17 +1860,19 @@ columns = [
         }
       ]
     }
-];
+  ];
 
-const meta = {
-  '/areas' : areas,
-  '/tables' : tables,
-  '/columns' : columns
-}
 
-router.get('/:endpoint', (req, res) => {
-    const { endpoint } = req.params;
-    res.json(meta['/' + endpoint])
+router.get('/areas', (req, res) => {
+    res.json(areas)
+});
+
+router.get('/tables', (req, res) => {
+    res.json(tables)
+});
+
+router.get('/columns', (req, res) => {
+  res.json(columns)
 });
 
 // Export the router

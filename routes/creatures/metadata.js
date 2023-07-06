@@ -5,6 +5,7 @@
 //
 
 const creatureLookupMetadata = {
+    params: {},
     columns: [
         { name: "creature_name", displayName: "Creature Name", type: "name", scale: "categorical" },
         { name: "creature_faction", displayName: "Creature Faction", type: "name", scale: "categorical" },
@@ -16,6 +17,9 @@ const creatureLookupMetadata = {
 };
 
 const creatureInteractionsMetadata = {
+    params: {
+        "creatureName" : {"required": true}
+    },
     columns: [
         { name: "interaction_event_time", displayName: "Interaction Time", type: "time", scale: "ordinal" },
         { name: "location_group_name", displayName: "Location Group", type: "name", scale: "categorical" },
@@ -29,6 +33,9 @@ const creatureInteractionsMetadata = {
 };
 
 const creatureGiftsMetadata = {
+    params: {
+        "creatureName" : {"required": true}
+    },
     columns: [
         { name: "gifting_event_time", displayName: "Gifting Time", type: "time", scale: "ordinal" },
         { name: "player_name", displayName: "Player", type: "name", scale: "categorical" },
@@ -40,6 +47,7 @@ const creatureGiftsMetadata = {
 };
 
 const creatureHealthMetadata = {
+    params: {},
     columns: [
         { name: "creature_name", displayName: "Creature Name", type: "name", scale: "categorical" },
         { name: "creature_faction", displayName: "Creature Faction", type: "name", scale: "categorical" },
@@ -51,6 +59,7 @@ const creatureHealthMetadata = {
 };
 
 const creatureMoodMetadata = {
+    params: {},
     columns: [
         { name: "creature_name", displayName: "Creature Name", type: "name", scale: "categorical" },
         { name: "creature_faction", displayName: "Creature Faction", type: "name", scale: "categorical" },
@@ -62,6 +71,7 @@ const creatureMoodMetadata = {
 };
 
 const happiestCreaturesMetadata = {
+    params: {},
     columns: [
         { name: "creature_name", displayName: "Creature Name", type: "name", scale: "categorical" },
         { name: "creature_faction", displayName: "Creature Faction", type: "name", scale: "categorical" },
@@ -73,6 +83,7 @@ const happiestCreaturesMetadata = {
 };
 
 const triageListMetadata = {
+    params: {},
     columns: [
         { name: "creature_name", displayName: "Creature Name", type: "name", scale: "categorical" },
         { name: "creature_faction", displayName: "Creature Faction", type: "name", scale: "categorical" },

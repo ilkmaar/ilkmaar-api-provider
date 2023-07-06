@@ -1,4 +1,5 @@
 const cookBookMetadata = {
+    params: {},
     columns: [
         { name: "recipe_name", displayName: "Recipe Name", type: "name", scale: "categorical" },
         { name: "resource_type", displayName: "Resource Type", type: "name", scale: "categorical" },
@@ -10,6 +11,7 @@ const cookBookMetadata = {
 };
 
 const goodCookBookMetadata = {
+    params: {},
     columns: [
         { name: "recipe_name", displayName: "Recipe Name", type: "name", scale: "categorical" },
         { name: "resource_type", displayName: "Resource Type", type: "name", scale: "categorical" },
@@ -22,6 +24,7 @@ const goodCookBookMetadata = {
 };
 
 const cauldronManualMetadata = {
+    params: {},
     columns: [
         { name: "recipe_name", displayName: "Recipe Name", type: "name", scale: "categorical" },
         { name: "recipe_temp", displayName: "Recipe Temperature", type: "number", scale: "numeric" },

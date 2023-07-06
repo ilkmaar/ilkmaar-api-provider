@@ -20,7 +20,7 @@ const foragingQuery = `
     JOIN
         players ON player_collection_access.player_id = players.player_id
     WHERE
-        players.player_name like ?
+        players.player_name like :playerName
     AND
         destination_collections.collection_type = 'inventory'
     ORDER BY
@@ -43,7 +43,7 @@ const giftingQuery = `
     JOIN
         recipes on items.recipe_id = recipes.recipe_id
     WHERE
-        player_name like ?`;
+        player_name like :playerName`;
 
 const craftingQuery = `
       SELECT
@@ -60,7 +60,7 @@ const craftingQuery = `
       JOIN
           players on player_collection_access.player_id = players.player_id
       WHERE
-          players.player_name like ?
+          players.player_name like :playerName
       ORDER BY crafting_event_time DESC
       LIMIT 10`;
 
@@ -82,7 +82,7 @@ const trashQuery = `
       JOIN
           resource_types on resources.resource_type_id = resource_types.resource_type_id
       WHERE
-          players.player_name like ?
+          players.player_name like :playerName
       AND
           collections.collection_type = 'crafting_table'
       ORDER BY resource_transfers.resource_transfer_time DESC
@@ -98,10 +98,10 @@ const allPlayerGiftingLogQuery = `
 
 const allQueries = {
     '/list': listQuery,
-    '/foraging': foragingQuery,
-    '/gifting': giftingQuery,
-    '/crafting' : craftingQuery,
-    '/trash' : trashQuery,
+    '/foraging': foragingQuery, // params: playerName
+    '/gifting': giftingQuery, // params: playerName
+    '/crafting' : craftingQuery, // params: playerName
+    '/trash' : trashQuery, // params: playerName
     '/allPlayerGiftingLog' : allPlayerGiftingLogQuery
 }
 

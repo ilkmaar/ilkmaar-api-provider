@@ -3,5 +3,6 @@
     "user": "USERNAME",
     "password": "PASSWORD",
     "database": "DATABASE_NAME",
-    "port": PORT
+    "port": PORT,
+    "namedPlaceholders": true
 }
