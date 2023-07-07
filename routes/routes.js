@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const connection = require('../db');
 
-
 const infoQueries = require('./info/queries');
 const playersQueries = require('./players/queries');
 const creatureQueries = require('./creatures/queries');
